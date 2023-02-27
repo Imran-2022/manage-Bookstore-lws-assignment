@@ -1,4 +1,4 @@
-import { SEARCH, STATUS } from "./actionTypes";
+import { SEARCH, STATUS,UPDATE } from "./actionTypes";
 
 export const filterBySearch = (searchText) => {
     return {
@@ -8,9 +8,14 @@ export const filterBySearch = (searchText) => {
 };
 
 export const statusChanged = (status) => {
-    console.log(status);
     return {
         type: STATUS,
+        payload: status,
+    };
+};
+export const updateBook = (status) => {
+    return {
+        type: UPDATE,
         payload: status,
     };
 };

@@ -31,12 +31,11 @@ const Main = () => {
 
     const filterBySearch = (books) => {
         const { search } = filters;
-        if (search.trim()) {
-            return books.name === search.trim()
+        if (search) {
+            return books.name.toLowerCase().includes(search.toLowerCase())
         }
         return true;
     }
-    // .trim()
 
     return (
         <main className="py-12 2xl:px-6">

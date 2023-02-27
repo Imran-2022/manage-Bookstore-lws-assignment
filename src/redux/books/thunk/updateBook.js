@@ -1,6 +1,7 @@
 import { updateBooks } from "../actions";
 
 const updateBook = (bookId, books) => {
+    console.log(bookId,books);
     return async (dispatch) => {
         const response = await fetch(`https://todo-app-json-serverr.herokuapp.com/todos/${bookId}`, {
             method: "PATCH",

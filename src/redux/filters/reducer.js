@@ -1,4 +1,4 @@
-import { SEARCH, STATUS } from "./actionTypes";
+import { SEARCH, STATUS,UPDATE } from "./actionTypes";
 import initialState from "./initialState";
 
 const reducer = (state = initialState, action) => {
@@ -13,7 +13,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 search:action.payload,
-            };;
+            };
+        case UPDATE:
+            return {
+                ...state,
+                update:action.payload,
+            };
             
         default:
             return state;
