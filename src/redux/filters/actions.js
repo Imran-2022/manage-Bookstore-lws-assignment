@@ -8,6 +8,7 @@ export const filterBySearch = (searchText) => {
 };
 
 export const statusChanged = (status) => {
+    console.log(status);
     return {
         type: STATUS,
         payload: status,

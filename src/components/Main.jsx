@@ -8,10 +8,26 @@ import Filter from './Filter';
 const Main = () => {
     const dispatch = useDispatch();
     const books = useSelector((state) => state.books);
+    const filters = useSelector((state) => state.filter);
 
     useEffect(() => {
         dispatch(fetchBooks);
     }, [dispatch]);
+
+
+    const filterByStatus = (book) => {
+        const { status } = filters;
+        switch (status) {
+          case 'All':
+            return true;
+    
+          case 'Featured':
+            return book.featured;
+    
+          default:
+            return true;
+        }
+      };
 
     return (
         <main className="py-12 2xl:px-6">
@@ -20,7 +36,9 @@ const Main = () => {
                     <Filter />
                     <div className="lws-bookContainer">
                         {
-                            books?.map(dt=><BookList dt={dt} key={dt.id}/>)
+                            books
+                            .filter(filterByStatus)
+                            .map(dt=><BookList dt={dt} key={dt.id}/>)
                         }
                         
                     </div>
