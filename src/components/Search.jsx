@@ -1,6 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { filterBySearch } from '../redux/filters/actions';
 
 const Search = () => {
+    const dispatch=useDispatch()
+
+    const handleSearch =(search)=>{
+        dispatch(filterBySearch(search))
+    }
+
     return (
         <form className="flex items-center">
             <div className="group relative rounded-md bg-white">
@@ -10,7 +18,7 @@ const Search = () => {
                         d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
                     </path>
                 </svg>
-                <input type="text" placeholder="Filter books..." className="search" id="lws-searchBook" />
+                <input type="text" placeholder="Filter books..." className="search" id="lws-searchBook" onChange={(e)=>handleSearch(e.target.value)} />
             </div>
         </form>
     );

@@ -18,16 +18,25 @@ const Main = () => {
     const filterByStatus = (book) => {
         const { status } = filters;
         switch (status) {
-          case 'All':
-            return true;
-    
-          case 'Featured':
-            return book.featured;
-    
-          default:
-            return true;
+            case 'All':
+                return true;
+
+            case 'Featured':
+                return book.featured;
+
+            default:
+                return true;
         }
-      };
+    };
+
+    const filterBySearch = (books) => {
+        const { search } = filters;
+        if (search.trim()) {
+            return books.name === search.trim()
+        }
+        return true;
+    }
+    // .trim()
 
     return (
         <main className="py-12 2xl:px-6">
@@ -37,10 +46,11 @@ const Main = () => {
                     <div className="lws-bookContainer">
                         {
                             books
-                            .filter(filterByStatus)
-                            .map(dt=><BookList dt={dt} key={dt.id}/>)
+                                .filter(filterBySearch)
+                                .filter(filterByStatus)
+                                .map(dt => <BookList dt={dt} key={dt.id} />)
                         }
-                        
+
                     </div>
                 </div>
                 <AddBook />

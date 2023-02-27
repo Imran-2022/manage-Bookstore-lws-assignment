@@ -10,7 +10,10 @@ const reducer = (state = initialState, action) => {
             };
 
         case SEARCH:
-            return state;
+            return {
+                ...state,
+                search:action.payload,
+            };;
             
         default:
             return state;
