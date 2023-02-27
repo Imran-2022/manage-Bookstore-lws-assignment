@@ -26,6 +26,24 @@
       "rating": 4,
       "featured": true,
       "id": 4
+    },
+    {
+      "name": "the book",
+      "author": "imran",
+      "thumbnail": "https://cdn.pixabay.com/photo/2015/12/05/08/25/fantasy-1077863_960_720.jpg",
+      "price": "33",
+      "rating": "2",
+      "featured": true,
+      "id": 5
+    },
+    {
+      "name": "the book",
+      "author": "imran",
+      "thumbnail": "https://cdn.pixabay.com/photo/2015/12/05/08/25/fantasy-1077863_960_720.jpg",
+      "price": "33",
+      "rating": "2",
+      "featured": false,
+      "id": 6
     }
   ]
 }

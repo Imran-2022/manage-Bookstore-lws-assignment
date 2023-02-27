@@ -1,11 +1,15 @@
+import { Provider } from "react-redux"
 import Main from "./components/Main"
 import Navbar from "./components/Navbar"
+import store from "./redux/store"
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Main/>
-    </div>
+    <Provider store={store}>
+      <div>
+        <Navbar />
+        <Main />
+      </div>
+    </Provider>
   )
 }
 

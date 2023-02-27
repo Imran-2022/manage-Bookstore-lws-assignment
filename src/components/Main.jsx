@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import fetchBooks from '../redux/books/thunk/fetchBooks';
 import AddBook from './AddBook';
 import BookList from './BookList';
 import Filter from './Filter';
 
 const Main = () => {
+    const dispatch = useDispatch();
+    const books = useSelector((state) => state.books);
+
+    useEffect(() => {
+        dispatch(fetchBooks);
+    }, [dispatch]);
+
     return (
-        <main class="py-12 2xl:px-6">
-            <div class="container grid xl:grid-cols-[auto_350px] 2xl:grid-cols-[auto_400px] gap-4 2xl:gap-8">
-                <div class="order-2 xl:-order-1">
-                   <Filter/>
-                    <div class="lws-bookContainer">
-                      <BookList/>
+        <main className="py-12 2xl:px-6">
+            <div className="container grid xl:grid-cols-[auto_350px] 2xl:grid-cols-[auto_400px] gap-4 2xl:gap-8">
+                <div className="order-2 xl:-order-1">
+                    <Filter />
+                    <div className="lws-bookContainer">
+                        {
+                            books?.map(dt=><BookList dt={dt} key={dt.id}/>)
+                        }
+                        
                     </div>
                 </div>
-                <AddBook/>
+                <AddBook />
             </div>
         </main>
     );
