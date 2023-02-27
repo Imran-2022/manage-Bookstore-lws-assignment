@@ -28,12 +28,12 @@
       "id": 4
     },
     {
-      "name": "the book",
+      "name": "the bookll",
       "author": "imran",
       "thumbnail": "https://cdn.pixabay.com/photo/2015/12/05/08/25/fantasy-1077863_960_720.jpg",
       "price": "33",
       "rating": "2",
-      "featured": true,
+      "featured": false,
       "id": 5
     }
   ]

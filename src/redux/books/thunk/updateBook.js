@@ -3,7 +3,7 @@ import { updateBooks } from "../actions";
 const updateBook = (bookId, books) => {
     console.log(bookId,books);
     return async (dispatch) => {
-        const response = await fetch(`https://todo-app-json-serverr.herokuapp.com/todos/${bookId}`, {
+        const response = await fetch(`http://localhost:9000/books/${bookId}`, {
             method: "PATCH",
             body: JSON.stringify(books),
             headers: {

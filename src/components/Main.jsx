@@ -12,7 +12,7 @@ const Main = () => {
 
     useEffect(() => {
         dispatch(fetchBooks);
-    }, [dispatch]);
+    }, [dispatch,filters]);
 
 
     const filterByStatus = (book) => {

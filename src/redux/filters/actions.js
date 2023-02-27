@@ -13,7 +13,7 @@ export const statusChanged = (status) => {
         payload: status,
     };
 };
-export const updateBook = (status) => {
+export const updateBooklist = (status) => {
     return {
         type: UPDATE,
         payload: status,

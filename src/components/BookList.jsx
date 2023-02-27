@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import deleteBook from '../redux/books/thunk/deleteBook';
-import { updateBook } from '../redux/filters/actions';
+import { updateBooklist } from '../redux/filters/actions';
 
 const BookList = ({dt}) => {
     const dispatch=useDispatch();
@@ -12,7 +12,7 @@ const BookList = ({dt}) => {
     }
 
     const handleUpdate=()=>{
-        dispatch(updateBook(dt))
+        dispatch(updateBooklist(dt))
     }
     return (
         <div className="book-card">
