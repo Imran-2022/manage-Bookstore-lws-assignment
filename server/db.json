@@ -5,7 +5,7 @@
       "author": "Mick Herron",
       "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
       "price": 14,
-      "rating": 3,
+      "rating": "1",
       "featured": true,
       "id": 1
     },
@@ -14,7 +14,7 @@
       "author": "Laura Dave",
       "thumbnail": "https://m.media-amazon.com/images/P/1501171348.01._SCLZZZZZZZ_SX500_.jpg",
       "price": 13.99,
-      "rating": 4,
+      "rating": "2",
       "featured": false,
       "id": 2
     },
@@ -23,16 +23,16 @@
       "author": "Marijn Haverbeke",
       "thumbnail": "https://m.media-amazon.com/images/I/51InjRPaF7L._SX377_BO1,204,203,200_.jpg",
       "price": 23.99,
-      "rating": 4,
+      "rating": "3",
       "featured": false,
       "id": 4
     },
     {
-      "name": "the great book ",
-      "author": "md imranul haque",
+      "name": "the great book",
+      "author": "imran",
       "thumbnail": "https://cdn.pixabay.com/photo/2015/12/05/08/25/fantasy-1077863_960_720.jpg",
-      "price": "333",
-      "rating": "3",
+      "price": "444",
+      "rating": "5",
       "featured": true,
       "id": 5
     }
