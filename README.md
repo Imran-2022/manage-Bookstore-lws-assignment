@@ -1,5 +1,5 @@
-# manage-Bookstore-lws-assignment
-
+#### manage-Bookstore-lws-assignment
+# NOTE : TO see the live view you need to run server first 😐
 ## 
 
 এই এসাইনমেন্ট এ যা যা করতে হবেঃ
